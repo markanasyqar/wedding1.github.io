@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide-in-bawah {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.animate-slide-in-bawah {
+    animation: slide-in-bawah 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Styling untuk piring hitam yang sangat kecil (50px) */
+.vinyl {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    animation: spin 0s linear infinite;
+}
+
+.vinyl .groove {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #333 20%, #000 80%);
+    position: absolute;
+    z-index: 1;
+}
+
+.vinyl .center {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Tombol Play yang ada di tengah piring hitam */
+.btn-play-pause {
+    background-color: #fff;
+    color: #000;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #000;
+    z-index: 2; /* Agar tombol berada di atas piring */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.btn-play-pause:focus {
+    outline: none;
+}

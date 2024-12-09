@@ -66,3 +66,13 @@ function toggleGuestInput(isAttending, buttonId) {
         attendButton.classList.add("bg-gray-200", "text-gray-700");
     }
 }
+
+
+
+let aset8 = document.getElementById('aset8');
+
+window.addEventListener('scroll', () =>{
+    let value = window.scrollY;
+
+    aset8.style.top = value * -1 + 'px';
+});

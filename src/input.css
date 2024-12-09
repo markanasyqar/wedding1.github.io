@@ -38,8 +38,8 @@
 
 /* Styling untuk piring hitam yang sangat kecil (50px) */
 .vinyl {
-    width: 50px;
-    height: 50px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     background: #000;
     position: relative;
@@ -51,8 +51,8 @@
 }
 
 .vinyl .groove {
-    width: 45px;
-    height: 45px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     background: radial-gradient(circle, #333 20%, #000 80%);
     position: absolute;
@@ -60,8 +60,8 @@
 }
 
 .vinyl .center {
-    width: 12px;
-    height: 12px;
+    width: 24px;
+    height: 24px;
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
@@ -71,8 +71,8 @@
 .btn-play-pause {
     background-color: #fff;
     color: #000;
-    font-size: 12px;
-    padding: 6px 10px;
+    font-size: 24px;
+    padding: 10px 18px;
     border-radius: 50%;
     cursor: pointer;
     border: 2px solid #000;
@@ -85,7 +85,24 @@
     outline: none;
 }
 
-
+@media (min-width: 1024px) {
+  .vinyl {
+    width: 50px;
+    height: 50px;
+  }
+  .vinyl .groove {
+    width: 45px;
+    height: 45px;
+  }
+  .vinyl .center {
+    width: 12px;
+    height: 12px;
+  }
+  .btn-play-pause {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
 
 /* Memastikan seluruh elemen latar belakang transparan */
 #awal, #content, #home {
@@ -169,3 +186,11 @@
   .slide:nth-child(4) {
     animation: fade 20s infinite 12s; /* Delay for next image */
   }
+
+  .parallax img{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 20vh;
+    pointer-events: none;
+}
